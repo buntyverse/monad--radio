@@ -15,8 +15,6 @@ RUN mkdir -p /config /music
 # Copy pre-configured OBS config
 COPY config/ /config
 
-# Mount music folder
-VOLUME /music
 
 # Start virtual display and OBS streaming automatically
 CMD Xvfb :99 -screen 0 1920x1080x24 & \
