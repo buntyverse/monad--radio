@@ -15,8 +15,10 @@ RUN mkdir -p /config /music
 # Copy pre-configured OBS config
 COPY config/ /config
 
-
-# Start virtual display and OBS streaming automatically
+# Start headless OBS with stream key from env variable
 CMD Xvfb :99 -screen 0 1920x1080x24 & \
     export DISPLAY=:99 && \
-    obs --startstreaming --scene "Main"
+    obs --startstreaming \
+        --scene "Main" \
+        --server "${OBS_STREAM_SERVER}" \
+        --key "${OBS_STREAM_KEY}"
