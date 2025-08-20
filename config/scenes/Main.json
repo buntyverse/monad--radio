@@ -1,0 +1,14 @@
+{
+    "sources": [
+        {
+            "name": "gMonadsBrowser",
+            "type": "browser_source",
+            "settings": {
+                "url": "https://gmonads.com",
+                "width": 1920,
+                "height": 1080
+            }
+        },
+        
+    ]
+}
