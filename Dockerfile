@@ -20,5 +20,5 @@ CMD Xvfb :99 -screen 0 1920x1080x24 & \
     export DISPLAY=:99 && \
     obs --startstreaming \
         --scene "Main" \
-        --server "${OBS_STREAM_SERVER}" \
-        --key "${OBS_STREAM_KEY}"
+        --server "rtmp://live.restream.io/live" \
+        --key "re_10001040_event776725ecdab54beeb6d7a015fc6ca2f7"
